@@ -44,7 +44,10 @@ jobs:
       run: |
        poetry run task test
   lint:
+    needs: build
     runs-on: ubuntu-latest
+    concurrency:
+      group: some-group-name
     defaults:
       run:
         working-directory: ./example-app
@@ -73,8 +76,10 @@ jobs:
       run: |
        poetry run task test
   formatter:
-
+    needs: build
     runs-on: ubuntu-latest
+    concurrency:
+      group: some-group-name
     defaults:
       run:
         working-directory: ./example-app
@@ -103,7 +108,7 @@ jobs:
       run: |
        poetry run task test
   test:
-
+    needs: [lint,formatter,security]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -133,8 +138,10 @@ jobs:
       run: |
        poetry run task test
   security:
-
+    needs: build
     runs-on: ubuntu-latest
+    concurrency:
+      group: some-group-name
     defaults:
       run:
         working-directory: ./example-app
