@@ -43,6 +43,4 @@ jobs:
     - name: test with flake8
       run: |
        poetry run task test
-    - name: Test with pytest
-      run: |
-        pytest
+
