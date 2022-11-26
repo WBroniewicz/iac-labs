@@ -44,7 +44,7 @@ jobs:
       id: cached-poetry-dependencies
       uses: actions/cache@v3
       with:
-        path: /home/runner/work/iac-labs-local/iac-labs-local/example-app/.venv
+        path: /home/runner/work/iac-labs/iac-labs/example-app/.venv
         key: ${{ runner.os }}-venv
  
   lint:
@@ -67,7 +67,7 @@ jobs:
         id: cached-poetry-dependencies
         uses: actions/cache@v3
         with:
-          path: /home/runner/work/iac-labs-local/iac-labs-local/example-app/.venv
+          path: /home/runner/work/iac-labs/iac-labs/example-app/.venv
           key: ${{ runner.os }}-venv
       - name: Lint with flake8
         run: |
@@ -94,7 +94,7 @@ jobs:
         id: cached-poetry-dependencies
         uses: actions/cache@v3
         with:
-          path: /home/runner/work/iac-labs-local/iac-labs-local/example-app/.venv
+          path: /home/runner/work/iac-labs/iac-labs/example-app/.venv
           key: ${{ runner.os }}-venv
       - name: formatter
         run: |
@@ -121,7 +121,7 @@ jobs:
         id: cached-poetry-dependencies
         uses: actions/cache@v3
         with:
-          path: /home/runner/work/iac-labs-local/iac-labs-local/example-app/.venv
+          path: /home/runner/work/iac-labs/iac-labs/example-app/.venv
           key: ${{ runner.os }}-venv
       - name: security
         run: |
@@ -146,7 +146,7 @@ jobs:
         id: cached-poetry-dependencies
         uses: actions/cache@v3
         with:
-          path: /home/runner/work/iac-labs-local/iac-labs-local/example-app/.venv
+          path: /home/runner/work/iac-labs/iac-labs/example-app/.venv
           key: ${{ runner.os }}-venv
       - name: Test with pytest
         run: |
