@@ -34,9 +34,9 @@ jobs:
     - name: Lint with flake8
       run: |
        poetry run task lint
-    - name: formater with flake8
+    - name: formatter with flake8
       run: |
-       poetry run task formater
+       poetry run task formatter
     - name: security with flake8
       run: |
        poetry run task security
